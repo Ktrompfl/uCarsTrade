@@ -1,16 +1,14 @@
 package net.stormdev.ucarstrade;
 
+import net.stormdev.ucars.trade.Colors;
+import net.stormdev.ucarstrade.cars.DrivenCar;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 import java.util.regex.Pattern;
-
-import net.stormdev.ucars.trade.Colors;
-import net.stormdev.ucarstrade.cars.DrivenCar;
-
-import org.bukkit.Material;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.ItemMeta;
 
 public class ItemCarValidation {
 	public static DrivenCar getCar(ItemStack item){

@@ -1,13 +1,13 @@
 package net.stormdev.ucars.utils;
 
-import java.io.Serializable;
-import java.util.HashMap;
-import java.util.Map;
-
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Server;
 import org.bukkit.World;
+
+import java.io.Serializable;
+import java.util.HashMap;
+import java.util.Map;
 
 public final class SerializableLocation implements Serializable {
 	private static final long serialVersionUID = 8650311534439769069L;

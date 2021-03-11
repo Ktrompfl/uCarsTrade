@@ -1,29 +1,28 @@
 package net.stormdev.ucars.shops;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 import net.stormdev.ucars.trade.Lang;
-import net.stormdev.ucars.trade.main;
 import net.stormdev.ucars.trade.guis.IconMenu;
 import net.stormdev.ucars.trade.guis.IconMenu.OptionClickEvent;
 import net.stormdev.ucars.trade.guis.IconMenu.OptionClickEventHandler;
+import net.stormdev.ucars.trade.main;
 import net.stormdev.ucars.utils.CarGenerator;
 import net.stormdev.ucars.utils.CarValueCalculator;
 import net.stormdev.ucarstrade.cars.CarPresets;
 import net.stormdev.ucarstrade.cars.CarPresets.CarPreset;
 import net.stormdev.ucarstrade.cars.DrivenCar;
-
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.material.MaterialData;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class CarShop {
 	private double value;

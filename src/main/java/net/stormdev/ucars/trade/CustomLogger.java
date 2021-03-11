@@ -1,10 +1,10 @@
 package net.stormdev.ucars.trade;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 import org.bukkit.ChatColor;
 import org.bukkit.command.ConsoleCommandSender;
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class CustomLogger {
 	public Boolean coloured = true;

@@ -1,8 +1,8 @@
 package net.stormdev.ucars.utils;
 
-import net.minecraft.server.v1_12_R1.Entity;
-import net.minecraft.server.v1_12_R1.EntityLiving;
-import org.bukkit.craftbukkit.v1_12_R1.entity.CraftLivingEntity;
+import net.minecraft.server.v1_16_R2.Entity;
+import net.minecraft.server.v1_16_R2.EntityLiving;
+import org.bukkit.craftbukkit.v1_16_R2.entity.CraftLivingEntity;
 import org.bukkit.entity.LivingEntity;
 
 import java.lang.reflect.Method;
@@ -24,7 +24,7 @@ public class NPCOrientationUtil {
 	
 	public static void setYaw(LivingEntity v, float yaw){
 		EntityLiving ve = ((CraftLivingEntity)v).getHandle();
-		
+
 		Class<?> c = Entity.class;
 		try {
 			Method m = c.getDeclaredMethod("setYawPitch", float.class, float.class);

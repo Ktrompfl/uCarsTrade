@@ -1,9 +1,7 @@
 package net.stormdev.ucarstrade.displays;
 
 import net.stormdev.ucarstrade.cars.DrivenCar;
-
 import org.bukkit.entity.Entity;
-import org.bukkit.entity.Minecart;
 import org.bukkit.entity.Player;
 
 public class DisplayManager {

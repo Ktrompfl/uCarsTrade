@@ -6,7 +6,6 @@ import net.stormdev.ucarstrade.cars.DrivenCar;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
 import org.bukkit.entity.Entity;
-import org.bukkit.scheduler.BukkitRunnable;
 
 import java.io.*;
 import java.util.*;
@@ -145,7 +144,7 @@ public class CarSaver {
 	}
 	
 	public void asyncSave(){
-		main.plugin.getServer().getScheduler().runTaskAsynchronously(main.plugin, new BukkitRunnable(){
+		main.plugin.getServer().getScheduler().runTaskAsynchronously(main.plugin, new Runnable(){
 
 			public void run() {
 				saveIt();

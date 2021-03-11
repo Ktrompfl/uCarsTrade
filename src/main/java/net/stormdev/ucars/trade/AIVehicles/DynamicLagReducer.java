@@ -1,7 +1,6 @@
 package net.stormdev.ucars.trade.AIVehicles;
 
 import net.stormdev.ucars.trade.main;
-
 import org.bukkit.Bukkit;
 
 public class DynamicLagReducer implements Runnable {

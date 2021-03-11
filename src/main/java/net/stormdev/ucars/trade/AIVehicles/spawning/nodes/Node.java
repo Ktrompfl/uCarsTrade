@@ -1,17 +1,16 @@
 package net.stormdev.ucars.trade.AIVehicles.spawning.nodes;
 
-import java.io.Serializable;
-
-import net.stormdev.ucars.trade.main;
 import net.stormdev.ucars.trade.AIVehicles.AIRouter;
 import net.stormdev.ucars.trade.AIVehicles.AITrackFollow;
+import net.stormdev.ucars.trade.main;
 import net.stormdev.ucars.utils.SerializableLocation;
-
 import org.bukkit.Bukkit;
 import org.bukkit.Chunk;
 import org.bukkit.Location;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
+
+import java.io.Serializable;
 
 public class Node implements Serializable {
 	private static final long serialVersionUID = 1L;

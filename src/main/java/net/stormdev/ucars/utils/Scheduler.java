@@ -1,8 +1,7 @@
 package net.stormdev.ucars.utils;
 
-import net.stormdev.ucars.trade.main;
 import net.stormdev.ucars.trade.AIVehicles.DynamicLagReducer;
-
+import net.stormdev.ucars.trade.main;
 import org.bukkit.Bukkit;
 
 public class Scheduler {

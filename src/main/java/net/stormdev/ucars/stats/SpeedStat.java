@@ -1,8 +1,8 @@
 package net.stormdev.ucars.stats;
 
-import java.io.Serializable;
-
 import org.bukkit.plugin.Plugin;
+
+import java.io.Serializable;
 
 public class SpeedStat extends Stat implements Serializable {
 	private static final long serialVersionUID = -1817681841757332605L;

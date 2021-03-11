@@ -1,8 +1,8 @@
 package net.stormdev.ucars.stats;
 
-import java.io.Serializable;
-
 import org.bukkit.plugin.Plugin;
+
+import java.io.Serializable;
 
 public class HealthStat extends Stat implements Serializable {
 	private static final long serialVersionUID = -5068812300427014970L;

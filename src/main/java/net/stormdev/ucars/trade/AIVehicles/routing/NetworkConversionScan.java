@@ -1,18 +1,10 @@
 package net.stormdev.ucars.trade.AIVehicles.routing;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.UUID;
-import java.util.concurrent.Callable;
-import java.util.concurrent.Future;
-
 import net.md_5.bungee.api.ChatColor;
-import net.stormdev.ucars.trade.main;
 import net.stormdev.ucars.trade.AIVehicles.AIRouter;
 import net.stormdev.ucars.trade.AIVehicles.AITrackFollow;
 import net.stormdev.ucars.trade.AIVehicles.DynamicLagReducer;
-
+import net.stormdev.ucars.trade.main;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -21,6 +13,12 @@ import org.bukkit.block.BlockFace;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitTask;
 import org.bukkit.util.Vector;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
+import java.util.concurrent.Callable;
+import java.util.concurrent.Future;
 
 public class NetworkConversionScan { 
 	private static int SCAN_BRANCH_LIMIT = 1500;
@@ -165,9 +163,7 @@ public class NetworkConversionScan {
 					Vector vec = allBlocks.get(i);
 					Block bl = getBlock(vec); //TODO DONT use blocks as keys!
 					BlockRouteData brd = roadNetwork.get(i);
-					int data = RouteDecoder.getDataFromDir(brd.getType(), brd.getDirection());
-					bl.setType(Material.STAINED_GLASS);
-					bl.setData((byte) data);
+					bl.setType(RouteDecoder.getMaterial(brd.getType(), brd.getDirection()));
 					logger.log("Replacing control blocks "+(i+1)+"/"+size+"!");
 				}
 				logger.log("Block replacing complete!");

@@ -1,10 +1,10 @@
 package net.stormdev.ucars.utils;
 
-import java.io.Serializable;
-import java.util.UUID;
-
 import net.stormdev.ucarstrade.cars.DrivenCar;
 import net.stormdev.ucarstrade.displays.DisplayType;
+
+import java.io.Serializable;
+import java.util.UUID;
 
 public class CarForSale implements Serializable {
 	private static final long serialVersionUID = 2L;

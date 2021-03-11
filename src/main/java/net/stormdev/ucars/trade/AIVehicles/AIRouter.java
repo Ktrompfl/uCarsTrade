@@ -6,9 +6,9 @@ import com.useful.ucars.ClosestFace;
 import com.useful.ucars.util.UEntityMeta;
 import com.useful.ucarsCommon.StatValue;
 import net.stormdev.ucars.trade.AIVehicles.routing.BlockRouteData;
+import net.stormdev.ucars.trade.AIVehicles.routing.RouteDecoder;
 import net.stormdev.ucars.trade.AIVehicles.routing.RouteMethod;
 import net.stormdev.ucars.trade.main;
-import net.stormdev.ucars.utils.NPCOrientationUtil;
 import net.stormdev.ucars.utils.NoMobAI;
 import net.stormdev.ucarstrade.cars.DrivenCar;
 import org.bukkit.Bukkit;
@@ -17,7 +17,10 @@ import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
 import org.bukkit.configuration.ConfigurationSection;
-import org.bukkit.entity.*;
+import org.bukkit.entity.Entity;
+import org.bukkit.entity.LivingEntity;
+import org.bukkit.entity.Player;
+import org.bukkit.entity.Vehicle;
 import org.bukkit.metadata.MetadataValue;
 import org.bukkit.util.Vector;
 
@@ -128,7 +131,7 @@ public class AIRouter {
 	
 	public static boolean isTrackBlock(Material mat){
 		if(isEncodedRouting()){
-			return mat.equals(Material.STAINED_GLASS);
+			return mat.name().toLowerCase().endsWith("stained_glass");
 		}
 		for(Material mate:trackBlocks.values()){
 			if(mat.name().contains(mate.name())){

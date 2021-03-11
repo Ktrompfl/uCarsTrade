@@ -1,8 +1,5 @@
 package net.stormdev.ucars.trade.AIVehicles.spawning;
 
-import com.useful.ucars.util.UEntityMeta;
-import com.useful.ucarsCommon.StatValue;
-import net.stormdev.ucars.trade.main;
 import net.stormdev.ucars.utils.NPCOrientationUtil;
 import net.stormdev.ucars.utils.NoMobAI;
 import net.stormdev.ucarstrade.cars.DrivenCar;

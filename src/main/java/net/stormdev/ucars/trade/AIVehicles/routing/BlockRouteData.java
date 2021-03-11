@@ -1,8 +1,8 @@
 package net.stormdev.ucars.trade.AIVehicles.routing;
 
-import java.io.Serializable;
-
 import org.bukkit.block.BlockFace;
+
+import java.io.Serializable;
 
 public class BlockRouteData implements Serializable {
 	private static final long serialVersionUID = 1L;

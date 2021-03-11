@@ -1,7 +1,7 @@
 package net.stormdev.ucars.utils;
 
-import net.minecraft.server.v1_12_R1.EntityInsentient;
-import org.bukkit.craftbukkit.v1_12_R1.entity.CraftEntity;
+import net.minecraft.server.v1_16_R2.EntityInsentient;
+import org.bukkit.craftbukkit.v1_16_R2.entity.CraftEntity;
 import org.bukkit.entity.Entity;
 
 import java.lang.reflect.Field;
@@ -10,14 +10,14 @@ import java.util.Set;
 
 public class NoMobAI {
 	public static void clearAI(Entity e){
-		net.minecraft.server.v1_12_R1.Entity nmsEntity = ((CraftEntity)e).getHandle();
+		net.minecraft.server.v1_16_R2.Entity nmsEntity = ((CraftEntity)e).getHandle();
 		if(!(nmsEntity instanceof EntityInsentient)){
 			return;
 		}
 		EntityInsentient ve = (EntityInsentient) nmsEntity;
 		try {
 			Class<?> pathClass = ve.goalSelector.getClass();
-			Field b = pathClass.getDeclaredField("b");
+			Field b = pathClass.getDeclaredField("d");
 			b.setAccessible(true);
 			Object goal = ve.goalSelector;
 			Object target = ve.targetSelector;
@@ -32,9 +32,9 @@ public class NoMobAI {
 	}
 	
 	public static void setAI(Entity bukkitEntity, boolean ai) {
-		net.minecraft.server.v1_12_R1.Entity nmsEntity = ((CraftEntity) bukkitEntity).getHandle();
+		net.minecraft.server.v1_16_R2.Entity nmsEntity = ((CraftEntity) bukkitEntity).getHandle();
 		if(nmsEntity instanceof EntityInsentient){
-			((EntityInsentient)nmsEntity).m(!ai);
+			((EntityInsentient)nmsEntity).setNoAI(!ai);
 		}
 		/*net.minecraft.server.v1_9_R1.Entity nmsEntity = ((CraftEntity) bukkitEntity).getHandle();
 	    NBTTagCompound tag = new NBTTagCompound();

@@ -1,9 +1,9 @@
 package net.stormdev.ucars.utils;
 
+import net.stormdev.ucars.stats.StatType;
+
 import java.io.Serializable;
 import java.util.UUID;
-
-import net.stormdev.ucars.stats.StatType;
 
 public class UpgradeForSale implements Serializable {
 	private static final long serialVersionUID = -5344858010281860425L;

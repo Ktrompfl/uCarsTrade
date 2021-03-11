@@ -1,20 +1,21 @@
 package net.stormdev.ucarstrade.displays;
 
+import com.useful.ucars.util.UEntityMeta;
+import com.useful.ucarsCommon.StatValue;
+import net.stormdev.ucars.trade.main;
+import net.stormdev.ucars.utils.CarFiller;
+import org.bukkit.Material;
+import org.bukkit.entity.Entity;
+import org.bukkit.entity.EntityType;
+import org.bukkit.entity.Horse;
+import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
+
 import java.io.Serializable;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
-
-import net.stormdev.ucars.trade.main;
-import net.stormdev.ucars.utils.CarFiller;
-
-import org.bukkit.Material;
-import org.bukkit.entity.*;
-import org.bukkit.inventory.ItemStack;
-
-import com.useful.ucars.util.UEntityMeta;
-import com.useful.ucarsCommon.StatValue;
 
 public class Displays implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -25,7 +26,7 @@ public class Displays implements Serializable {
 				public void putInCar(Entity car, Player player) {
 					DisplayType.putEntityInCar(car, EntityType.PIG);
 					return;
-					}}, false, 2, Material.PORK, Material.PORK, 5, new ArrayList<String>(
+					}}, false, 2, Material.PORKCHOP, Material.PORKCHOP, 5, new ArrayList<String>(
 							Arrays.asList(
 									main.colors.getInfo()+"A pig that rides", 
 									main.colors.getInfo()+"your car with you", 
@@ -36,7 +37,7 @@ public class Displays implements Serializable {
 				public void putInCar(Entity car, Player player) {
 					DisplayType.putEntityInCar(car, EntityType.SHEEP);
 					return;
-					}}, false, 2, Material.WOOL, Material.WOOL, 5, new ArrayList<String>(
+					}}, false, 2, Material.WHITE_WOOL, Material.WHITE_WOOL, 5, new ArrayList<String>(
 							Arrays.asList(
 									main.colors.getInfo()+"A sheep that rides", 
 									main.colors.getInfo()+"your car with you", 
@@ -178,7 +179,7 @@ public class Displays implements Serializable {
 				public void putInCar(Entity car, Player player) {
 					DisplayType.putEntityInCar(car, EntityType.SQUID);
 					return;
-					}}, true, 4, Material.INK_SACK, Material.INK_SACK, 20, new ArrayList<String>(
+					}}, true, 4, Material.INK_SAC, Material.INK_SAC, 20, new ArrayList<String>(
 							Arrays.asList(
 									main.colors.getInfo()+"A Squid that rides", 
 									main.colors.getInfo()+"your car with you", 
@@ -190,7 +191,7 @@ public class Displays implements Serializable {
 				public void putInCar(Entity car, Player player) {
 					DisplayType.putEntityInCar(car, EntityType.SNOWMAN);
 					return;
-					}}, true, 4, Material.SNOW_BALL, Material.SNOW_BALL, 64, new ArrayList<String>(
+					}}, true, 4, Material.SNOWBALL, Material.SNOWBALL, 64, new ArrayList<String>(
 							Arrays.asList(
 									main.colors.getInfo()+"A Snowman that rides", 
 									main.colors.getInfo()+"your car with you", 
@@ -238,7 +239,7 @@ public class Displays implements Serializable {
 				public void putInCar(Entity car, Player player) {
 					DisplayType.putEntityInCar(car, EntityType.OCELOT);
 					return;
-					}}, true, 4, Material.RAW_FISH, Material.RAW_FISH, 8, new ArrayList<String>(
+					}}, true, 4, Material.COD, Material.COD, 8, new ArrayList<String>(
 							Arrays.asList(
 									main.colors.getInfo()+"An ocelot that rides", 
 									main.colors.getInfo()+"your car with you", 
@@ -250,7 +251,7 @@ public class Displays implements Serializable {
 				public void putInCar(Entity car, Player player) {
 					DisplayType.putEntityInCar(car, EntityType.BOAT);
 					return;
-					}}, false, 20, Material.BOAT, Material.BOAT, 1, new ArrayList<String>(
+					}}, false, 20, Material.OAK_BOAT, Material.OAK_BOAT, 1, new ArrayList<String>(
 							Arrays.asList(
 									main.colors.getInfo()+"Makes your car float", 
 									main.colors.getInfo()+"on liquid.", 

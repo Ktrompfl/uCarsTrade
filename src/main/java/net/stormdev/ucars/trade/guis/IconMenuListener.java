@@ -1,7 +1,6 @@
 package net.stormdev.ucars.trade.guis;
 
 import net.stormdev.ucars.trade.main;
-
 import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;

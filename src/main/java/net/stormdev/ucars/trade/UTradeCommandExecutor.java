@@ -1,9 +1,6 @@
 package net.stormdev.ucars.trade;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
-
+import com.useful.ucars.ClosestFace;
 import net.stormdev.ucars.trade.AIVehicles.AIRouter;
 import net.stormdev.ucars.trade.AIVehicles.AITrackFollow;
 import net.stormdev.ucars.trade.AIVehicles.DynamicLagReducer;
@@ -15,10 +12,7 @@ import net.stormdev.ucars.trade.AIVehicles.spawning.nodes.AINodesSpawnManager;
 import net.stormdev.ucars.trade.AIVehicles.spawning.nodes.NetworkScan;
 import net.stormdev.ucars.trade.AIVehicles.spawning.nodes.Node;
 import net.stormdev.ucars.utils.CarGenerator;
-import net.stormdev.ucars.utils.NPCOrientationUtil;
-import net.stormdev.ucars.utils.NoMobAI;
 import net.stormdev.ucarstrade.cars.DrivenCar;
-
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
@@ -28,13 +22,13 @@ import org.bukkit.block.BlockFace;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
-import org.bukkit.entity.Villager;
 import org.bukkit.inventory.ItemStack;
 
-import com.useful.ucars.ClosestFace;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 
 public class UTradeCommandExecutor implements CommandExecutor {
 	main plugin = null;
@@ -327,8 +321,7 @@ public class UTradeCommandExecutor implements CommandExecutor {
 			}
 			float yaw = player.getLocation().getYaw();
 			BlockFace dir = ClosestFace.getClosestFace(yaw);
-			int data = RouteDecoder.getDataFromDir(RouteBlockType.DIRECTIONAL, dir);
-			player.setItemInHand(new ItemStack(Material.STAINED_GLASS, 1, (short) data));
+			player.setItemInHand(new ItemStack(RouteDecoder.getMaterial(RouteBlockType.DIRECTIONAL, dir)));
 			sender.sendMessage(ChatColor.GREEN+"Put in hand!");
 			return true;
 		}

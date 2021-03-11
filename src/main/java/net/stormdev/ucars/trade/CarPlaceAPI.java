@@ -1,27 +1,23 @@
 package net.stormdev.ucars.trade;
 
-import java.util.regex.Pattern;
-
-import net.stormdev.ucars.entity.Car;
-import net.stormdev.ucars.entity.CarMinecraftEntity;
-import net.stormdev.ucarstrade.cars.CarPresets.CarPreset;
-import net.stormdev.ucarstrade.cars.DrivenCar;
-import net.stormdev.ucarstrade.displays.DisplayManager;
-
-import org.bukkit.Location;
-import org.bukkit.block.Block;
-import org.bukkit.block.BlockFace;
-import org.bukkit.entity.Entity;
-import org.bukkit.entity.EntityType;
-import org.bukkit.entity.Minecart;
-import org.bukkit.entity.Player;
-
 import com.useful.ucars.CarHealthData;
 import com.useful.ucars.CartOrientationUtil;
 import com.useful.ucars.ucars;
 import com.useful.ucars.util.UEntityMeta;
 import com.useful.ucarsCommon.StatValue;
+import net.stormdev.ucars.entity.Car;
+import net.stormdev.ucars.entity.CarMinecraftEntity;
+import net.stormdev.ucarstrade.cars.CarPresets.CarPreset;
+import net.stormdev.ucarstrade.cars.DrivenCar;
+import net.stormdev.ucarstrade.displays.DisplayManager;
+import org.bukkit.Location;
+import org.bukkit.block.Block;
+import org.bukkit.block.BlockFace;
+import org.bukkit.entity.Entity;
+import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
+
+import java.util.regex.Pattern;
 
 public class CarPlaceAPI {
 	public static Entity placeCar(DrivenCar carData, Location placeLoc, Player placer, float direction){

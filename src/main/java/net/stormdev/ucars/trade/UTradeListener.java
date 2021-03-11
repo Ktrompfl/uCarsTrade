@@ -3,8 +3,8 @@ package net.stormdev.ucars.trade;
 import com.useful.uCarsAPI.uCarCrashEvent;
 import com.useful.uCarsAPI.uCarRespawnEvent;
 import com.useful.uCarsAPI.uCarsAPI;
-import com.useful.ucars.*;
 import com.useful.ucars.Lang;
+import com.useful.ucars.*;
 import com.useful.ucars.util.UEntityMeta;
 import com.useful.ucarsCommon.StatValue;
 import net.milkbowl.vault.economy.EconomyResponse;
@@ -18,15 +18,12 @@ import net.stormdev.ucars.trade.guis.InputMenu.OptionClickEvent;
 import net.stormdev.ucars.utils.*;
 import net.stormdev.ucarstrade.ItemCarValidation;
 import net.stormdev.ucarstrade.cars.CarPresets;
-import net.stormdev.ucarstrade.cars.CarPresets.CarPreset;
 import net.stormdev.ucarstrade.cars.DrivenCar;
-import net.stormdev.ucarstrade.displays.DisplayManager;
 import net.stormdev.ucarstrade.displays.DisplayType;
 import net.stormdev.ucarstrade.displays.Displays;
 import org.bukkit.*;
 import org.bukkit.block.*;
 import org.bukkit.entity.*;
-import org.bukkit.event.Event.Result;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
@@ -172,8 +169,8 @@ public class UTradeListener implements Listener {
 				((Damageable)e).damage(5);
 			}
 		}
-		
-		loc.getWorld().playEffect(loc, Effect.EXPLOSION_HUGE, 20);
+
+		loc.getWorld().spawnParticle(Particle.EXPLOSION_HUGE,loc, 20);
 		loc.getWorld().playSound(loc, Sound.ENTITY_GENERIC_EXPLODE, 5f, 1f);
 	}
 	

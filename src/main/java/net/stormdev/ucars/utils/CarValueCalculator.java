@@ -1,9 +1,8 @@
 package net.stormdev.ucars.utils;
 
+import com.useful.ucars.ucars;
 import net.stormdev.ucars.trade.main;
 import net.stormdev.ucarstrade.cars.DrivenCar;
-
-import com.useful.ucars.ucars;
 
 public class CarValueCalculator {
 	public static double getCarValueForSale(DrivenCar car){

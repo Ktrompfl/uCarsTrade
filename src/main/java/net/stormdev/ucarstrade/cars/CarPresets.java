@@ -1,18 +1,16 @@
 package net.stormdev.ucarstrade.cars;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
+import com.google.common.primitives.Doubles;
+import com.useful.ucars.ItemStackFromId;
 import net.stormdev.ucars.trade.main;
-
-import org.apache.commons.lang3.ArrayUtils;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.material.MaterialData;
 
-import com.useful.ucars.ItemStackFromId;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class CarPresets {
 	public static boolean isCarPresetsUsed = false;
@@ -113,7 +111,7 @@ public class CarPresets {
 			}
 			CarPreset cp = new CarPreset(name, speed, health, accelMod, turnAmountPerTick, modifiers, displayBlock, offset);
 			cp.setMaxPassengers(carSect.getInt("passengers.max"));
-			cp.setBoatOrientationOffsetDeg(ArrayUtils.toPrimitive(carSect.getDoubleList("passengers.boatOrientationOffsetDeg").toArray(new Double[]{})));
+			cp.setBoatOrientationOffsetDeg(Doubles.toArray(carSect.getDoubleList("passengers.boatOrientationOffsetDeg")));
 			cp.setHitboxX((float) carSect.getDouble("hitbox.x"));
 			cp.setHitboxZ((float) carSect.getDouble("hitbox.z"));
 			addCarPreset(cp);

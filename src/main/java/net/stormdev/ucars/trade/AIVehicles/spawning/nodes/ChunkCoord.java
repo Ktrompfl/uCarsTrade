@@ -1,11 +1,11 @@
 package net.stormdev.ucars.trade.AIVehicles.spawning.nodes;
 
-import java.io.Serializable;
-import java.util.UUID;
-
 import org.bukkit.Bukkit;
 import org.bukkit.Chunk;
 import org.bukkit.World;
+
+import java.io.Serializable;
+import java.util.UUID;
 
 public class ChunkCoord implements Serializable {
 	private static final long serialVersionUID = 1L;

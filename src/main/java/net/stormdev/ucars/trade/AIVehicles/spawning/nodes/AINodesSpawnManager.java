@@ -1,24 +1,21 @@
 package net.stormdev.ucars.trade.AIVehicles.spawning.nodes;
 
+import com.useful.ucars.util.UEntityMeta;
+import net.stormdev.ucars.trade.AIVehicles.AIRouter;
+import net.stormdev.ucars.trade.AIVehicles.spawning.AbstractAISpawnManager;
+import net.stormdev.ucars.trade.main;
+import org.bukkit.Bukkit;
+import org.bukkit.Location;
+import org.bukkit.World;
+import org.bukkit.entity.Entity;
+import org.bukkit.entity.Player;
+import org.bukkit.scheduler.BukkitTask;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import net.stormdev.ucars.trade.main;
-import net.stormdev.ucars.trade.AIVehicles.AIRouter;
-import net.stormdev.ucars.trade.AIVehicles.spawning.AbstractAISpawnManager;
-
-import org.bukkit.Bukkit;
-import org.bukkit.Location;
-import org.bukkit.World;
-import org.bukkit.entity.Entity;
-import org.bukkit.entity.EntityType;
-import org.bukkit.entity.Player;
-import org.bukkit.scheduler.BukkitTask;
-
-import com.useful.ucars.util.UEntityMeta;
 
 public class AINodesSpawnManager extends AbstractAISpawnManager {
 

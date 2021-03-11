@@ -1,22 +1,23 @@
 package net.stormdev.ucars.trade.guis;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.UUID;
-
+import com.useful.ucars.util.UEntityMeta;
+import com.useful.ucarsCommon.StatValue;
 import org.bukkit.Bukkit;
+import org.bukkit.craftbukkit.v1_16_R2.inventory.CraftInventory;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryHolder;
+import org.bukkit.inventory.InventoryView;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.Plugin;
 
-import com.useful.ucars.util.UEntityMeta;
-import com.useful.ucarsCommon.StatValue;
+import java.util.Arrays;
+import java.util.List;
+import java.util.UUID;
 
 public class IconMenu implements Listener,InventoryHolder {
 
@@ -88,7 +89,6 @@ public class IconMenu implements Listener,InventoryHolder {
 	public void open(Player player) {
 		Inventory inventory = Bukkit.createInventory(this, size, name);
 		enabled = true;
-		name = inventory.getTitle();
 		for (int i = 0; i < optionIcons.length; i++) {
 			if (optionIcons[i] != null) {
 				inventory.setItem(i, optionIcons[i]);
@@ -118,7 +118,7 @@ public class IconMenu implements Listener,InventoryHolder {
 			if(this.plugin == null){
 				Bukkit.broadcastMessage("PLUGIN NULL HALP HALP");
 			}
-			if(!event.getInventory().getName().equals(name)){
+			if(!event.getView().getTitle().equals(name)){
 				return;
 			}
 			UEntityMeta.removeMetadata(event.getPlayer(), metaData);
@@ -141,7 +141,7 @@ public class IconMenu implements Listener,InventoryHolder {
 			int slot = event.getRawSlot();
 			if (slot >= 0 && slot < size && optionNames[slot] != null) {
 				final Plugin plugin = this.plugin;
-				OptionClickEvent e = new OptionClickEvent(event.getInventory(), this,
+				OptionClickEvent e = new OptionClickEvent(event.getView(), this,
 						(Player) event.getWhoClicked(), slot, optionNames[slot], event);
 				handler.onOptionClick(e);
 				if (e.willClose()) {
@@ -171,11 +171,11 @@ public class IconMenu implements Listener,InventoryHolder {
 		private String name;
 		private boolean close;
 		private boolean destroy;
-		private Inventory inv;
+		private InventoryView inv;
 		private IconMenu menu;
 		private InventoryClickEvent parentEvent;
 
-		public OptionClickEvent(Inventory inv, IconMenu menu, Player player, int position, String name, InventoryClickEvent parentEvent) {
+		public OptionClickEvent(InventoryView inv, IconMenu menu, Player player, int position, String name, InventoryClickEvent parentEvent) {
 			this.player = player;
 			this.position = position;
 			this.name = name;
@@ -190,7 +190,7 @@ public class IconMenu implements Listener,InventoryHolder {
 			return this.parentEvent;
 		}
 		
-		public Inventory getInventory(){
+		public InventoryView getInventory(){
 			return inv;
 		}
 		

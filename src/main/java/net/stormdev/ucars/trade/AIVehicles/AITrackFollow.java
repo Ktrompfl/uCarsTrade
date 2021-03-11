@@ -1,18 +1,16 @@
 package net.stormdev.ucars.trade.AIVehicles;
 
-import net.stormdev.ucars.trade.main;
+import com.useful.ucars.util.UEntityMeta;
+import com.useful.ucarsCommon.StatValue;
 import net.stormdev.ucars.trade.AIVehicles.routing.BlockRouteData;
 import net.stormdev.ucars.trade.AIVehicles.routing.RouteBlockType;
 import net.stormdev.ucars.trade.AIVehicles.routing.RouteDecoder;
-
+import net.stormdev.ucars.trade.main;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
 import org.bukkit.block.Sign;
 import org.bukkit.entity.Entity;
-
-import com.useful.ucars.util.UEntityMeta;
-import com.useful.ucarsCommon.StatValue;
 
 public class AITrackFollow {
 	private static Material roadEdge = null;
@@ -42,13 +40,13 @@ public class AITrackFollow {
 	
 	public static BlockRouteData carriagewayDirection(Block roadSpawnBlock){
 		if(AIRouter.isEncodedRouting()){
-			BlockRouteData brd = RouteDecoder.getDirection(roadSpawnBlock.getType(), roadSpawnBlock.getData());
+			BlockRouteData brd = RouteDecoder.getDirection(roadSpawnBlock.getType());
 			if(brd == null || (brd.getType() == null && brd.getDirection() == null)){
 				Block under = roadSpawnBlock.getRelative(BlockFace.DOWN);
-				brd = RouteDecoder.getDirection(under.getType(), under.getData());
+				brd = RouteDecoder.getDirection(under.getType());
 				if(brd == null || (brd.getType() == null && brd.getDirection() == null)){
 					under = under.getRelative(BlockFace.DOWN);
-					brd = RouteDecoder.getDirection(under.getType(), under.getData());
+					brd = RouteDecoder.getDirection(under.getType());
 				}
 			}
 			return brd;
